@@ -1,0 +1,122 @@
+Initializing a Repository
+Langkah-langkah untuk membuat dan menginisialisasi repository Git baru di komputer Anda:
+
+Buat Direktori Baru
+Jalankan perintah berikut untuk membuat folder baru dan masuk ke dalamnya:
+
+mkdir nama-proyek
+cd nama-proyek
+Inisialisasi Repository Git
+
+Untuk menginisialisasi repository Git di folder tersebut, jalankan perintah:
+git init
+
+Tambahkan Beberapa File Buat file baru, misalnya Helloworld.js (untuk JavaScript) atau Helloworld.ts (untuk TypeScript):
+
+echo "console.log('Hello World');" > Helloworld.js
+
+Cek Status Repository Periksa status repository untuk melihat perubahan yang belum dikomit:
+git status
+
+Tambahkan File ke Staging Area Jalankan perintah berikut untuk menambahkan semua file ke staging area:
+git add .
+
+Lakukan Commit Pertama Simpan perubahan dengan membuat commit pertama:
+
+git commit -m "Initial commit"
+
+Making Changes and Pushing to GitHub
+Berikut adalah langkah-langkah untuk melakukan perubahan pada file, menambahkannya ke staging area, melakukan commit dengan pesan deskriptif, dan mengirimkannya ke GitHub.
+
+1. Buat atau Ubah File
+Lakukan perubahan pada file yang ada atau tambahkan file baru. Misalnya, edit file index.js:
+
+// Helloworld.js
+console.log('Hello, TypeScript!');
+console.log('Hello, TypeScript!');
+Kita Ubah Menjadi
+
+// Helloworld.js
+console.log('Hello, Javascript');
+console.log('Hello, TypeScript!');
+
+Lalu Kita lakukan:
+  git add .
+
+2. Lakukan Commit Perubahan
+Simpan perubahan dengan menjalankan commit :
+        git commit -m "Nama Perubahan/Nama File/"
+
+3. Push Perubahan ke GitHub
+Untuk mengirim perubahan ke repository di GitHub, jalankan perintah berikut:
+
+   git push origin main
+
+Working with Branches and Pushing to GitHub
+Langkah-langkah berikut akan memandu Anda untuk membuat branch baru, melakukan perubahan pada file, menambahkannya ke staging area, melakukan commit dengan pesan deskriptif, dan mengirimnya ke GitHub.
+
+1. Buat Branch Baru
+Untuk membuat branch baru dan langsung berpindah ke branch tersebut, gunakan perintah berikut:
+
+    git checkout -b nama-branch-baru
+
+3. Buat atau Ubah File
+Lakukan perubahan pada file yang ada atau tambahkan file baru. Misalnya, edit file Helloworld.js:
+
+console.log('Hello, Javascript');
+console.log('Hello, TypeScript!');
+console.log('New Output For New Branch'); // (+) menambahkan file 
+
+3. Cek Status Repository
+Periksa status repository untuk melihat perubahan yang belum dikomit:
+
+git status
+
+4. Tambahkan File ke Staging Area
+Jalankan perintah berikut untuk menambahkan semua file ke staging area:
+
+git add .
+
+5. Lakukan Commit di branch baru
+Simpan perubahan dengan membuat commit branch baru:
+
+git commit -m "New branch commit"
+
+6. Push Branch ke GitHub
+Untuk mengirim branch baru ke GitHub, jalankan perintah berikut:
+
+git push origin nama-branch-baru
+
+ Creating a Pull Request, Reviewing Code, and Merging Changes
+Berikut adalah langkah-langkah untuk membuat Pull Request (PR), melakukan review kode, dan menggabungkan perubahan ke branch utama (misalnya main).
+
+1. Buat Pull Request (PR)
+Setelah melakukan git push pada branch baru, ikuti langkah berikut untuk membuat Pull Request:
+
+Buka repository Anda di GitHub.
+Klik tab "Pull Requests" di bagian atas halaman.
+Klik tombol hijau "New pull request".
+Pada bagian "base", pilih branch utama (misalnya main).
+Pada bagian "compare", pilih branch yang berisi perubahan Anda (misalnya feature/add-login).
+Klik tombol "Create pull request".
+Beri judul yang deskriptif dan tambahkan penjelasan singkat tentang perubahan yang Anda lakukan.
+Klik tombol "Create pull request" untuk mengajukan PR.
+
+2. Review Kode
+Jika Anda atau rekan tim Anda ingin meninjau kode sebelum menggabungkannya:
+
+Klik pada file yang mengalami perubahan.
+Berikan komentar pada baris kode jika diperlukan.
+Pastikan kode sesuai standar dan tidak ada bug yang mencolok.
+
+3. Merge Perubahan ke Branch Utama
+Setelah kode direview dan disetujui, Anda bisa menggabungkan perubahan ke branch utama:
+
+Klik tombol hijau "Merge pull request".
+Klik tombol "Confirm merge" untuk menyelesaikan proses.
+Setelah merge selesai, Anda bisa menghapus branch yang sudah digabung dengan klik tombol "Delete branch" (opsional untuk menjaga repository tetap rapi).
+4. Sinkronisasi Repository Lokal (Opsional)
+Setelah merge dilakukan di GitHub, sinkronkan branch utama Anda dengan perintah berikut:
+
+git checkout main
+git pull origin main
